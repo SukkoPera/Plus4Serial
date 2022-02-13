@@ -1,0 +1,5 @@
+(sym_lib_table
+  (lib (name PLUS4_USERPORT)(type Legacy)(uri ${KIPRJMOD}/libs/PLUS4_USERPORT.lib)(options "")(descr ""))
+  (lib (name mc1488)(type Legacy)(uri ${KIPRJMOD}/libs/mc1488.lib)(options "")(descr ""))
+  (lib (name mc1489)(type Legacy)(uri ${KIPRJMOD}/libs/mc1489.lib)(options "")(descr ""))
+)

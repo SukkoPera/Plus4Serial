@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name Plus4Serial)(type KiCad)(uri ${KIPRJMOD}/Plus4Serial.pretty)(options "")(descr ""))
+)
