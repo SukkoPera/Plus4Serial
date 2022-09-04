@@ -5,7 +5,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "Plus4Serial"
-Date "2022-02-13"
+Date "2022-09-04"
 Rev "1git"
 Comp "SukkoPera"
 Comment1 "12V circuit taken from a 1985 issue of Byte Magazine"
@@ -517,7 +517,7 @@ Wire Wire Line
 Wire Wire Line
 	6635 2105 7115 2105
 Text Label 7115 2805 2    50   ~ 0
-_dcd
+_~dcd
 Text Label 7115 2605 2    50   ~ 0
 _rxd
 Text Label 7115 2405 2    50   ~ 0
@@ -616,7 +616,7 @@ Wire Wire Line
 	8835 4195 9185 4195
 NoConn ~ 8635 4570
 Text Label 9185 4670 2    50   ~ 0
-~dsr
+~dcd
 Wire Wire Line
 	8835 4670 9185 4670
 Wire Wire Line
@@ -627,12 +627,12 @@ Wire Wire Line
 	6635 2805 7890 2805
 Text Label 9180 2305 2    50   ~ 0
 ~cts
-Text Label 4240 1950 2    50   ~ 0
+Text Label 4240 2650 2    50   ~ 0
 ~cts
 Wire Wire Line
-	3875 1950 4240 1950
-Text Notes 3880 1815 0    50   ~ 0
-+4 HAS NO DEDICATED\n~CTS PIN, HOPEFULLY\nWE CAN USE A DATA PIN
+	3875 2650 4240 2650
+Text Notes 4360 3060 0    50   ~ 0
++4 HAS NO DEDICATED\n~CTS~ PIN, BUT IF YOU\nLOOK AT THE SCHEMATICS,\nIT WAS DUE TO END UP HERE,\nI.E.: WHERE IT WOULD BE\nON THE C64
 Wire Wire Line
 	10655 5980 10740 5980
 Wire Wire Line
@@ -661,7 +661,57 @@ NoConn ~ 2375 2450
 NoConn ~ 2375 2650
 NoConn ~ 3875 2350
 NoConn ~ 3875 2550
-NoConn ~ 3875 2650
 Text Notes 6805 1990 0    50   ~ 0
-MMMH... MAYBE RI COULD BE\nCONNECTED TO A DATA PIN\n(OR ~ATTN?) THROUGH A DIODE?
+MMMH... MAYBE RI COULD BE\nCONNECTED TO A DATA PIN\n(OR ~ATTN~?) THROUGH A DIODE?
+NoConn ~ 3875 1950
+NoConn ~ 8635 3620
+NoConn ~ 1600 2550
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 639336B5
+P 800 7445
+F 0 "#FLG0101" H 800 7520 50  0001 C CNN
+F 1 "PWR_FLAG" H 800 7618 50  0000 C CNN
+F 2 "" H 800 7445 50  0001 C CNN
+F 3 "~" H 800 7445 50  0001 C CNN
+	1    800  7445
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG0102
+U 1 1 63935EC7
+P 1280 7445
+F 0 "#FLG0102" H 1280 7520 50  0001 C CNN
+F 1 "PWR_FLAG" H 1280 7618 50  0000 C CNN
+F 2 "" H 1280 7445 50  0001 C CNN
+F 3 "~" H 1280 7445 50  0001 C CNN
+	1    1280 7445
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	800  7445 800  7350
+Wire Wire Line
+	1280 7445 1280 7350
+$Comp
+L power:+12V #PWR0101
+U 1 1 6393B788
+P 800 7350
+F 0 "#PWR0101" H 800 7200 50  0001 C CNN
+F 1 "+12V" H 815 7523 50  0000 C CNN
+F 2 "" H 800 7350 50  0001 C CNN
+F 3 "" H 800 7350 50  0001 C CNN
+	1    800  7350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:-12V #PWR0102
+U 1 1 6393BFB5
+P 1280 7350
+F 0 "#PWR0102" H 1280 7450 50  0001 C CNN
+F 1 "-12V" H 1295 7523 50  0000 C CNN
+F 2 "" H 1280 7350 50  0001 C CNN
+F 3 "" H 1280 7350 50  0001 C CNN
+	1    1280 7350
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
