@@ -6,7 +6,7 @@ Plus4Serial is an Open Hardware Serial Port Adapter that plugs into the Commodor
 ## Summary
 The Plus/4 User Port has all the signals required by an RS-232 interface, but they are at TTL voltage levels (i.e.: 0/+5V). In order to turn them into a real RS-232 port, they need to be shifted to higher voltages, which is the purpose of this board.
 
-All the signals available on the DE-9 port are translated and usable: `RXD`, `TXD`, `RTS`, `CTS`, `DTR`, `DSR` and `DCD`. The only exception is RI (Ring Indicator), which is left unconnected.
+All the signals available on the DE-9 port are translated and usable: `RXD`, `TXD`, `RTS`, `CTS`, `DTR`, `DSR` and `DCD`. The only exception is `RI` (Ring Indicator), which is left unconnected.
 
 The board plugs in the User Port, which means that it can also be used on a C16 or C116 through [a User Port card](https://github.com/SukkoPera/16up).
 
