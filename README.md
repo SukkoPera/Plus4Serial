@@ -13,7 +13,7 @@ The board plugs in the User Port, which means that it can also be used on a C16 
 ## Notes
 This board uses a MAX238 chip for the level shifting, which is nice because it only needs a +5VDC voltage supply. The 9VAC supply available on the User Port is therefore not used. You can find used ones from China easily and cheaply.
 
-If you have an older version of the board with a CTS/_CTS jumper, place it in the _CTS position, as it's the only correct one.
+If you have an older version of the board with a `CTS/_CTS` jumper, place it in the `_CTS` position, as it's the only correct one.
 
 If you are looking for a terminal emulator, I recommend [Term-80](https://plus4world.powweb.com/software/Term-80_English) as it is hands down the most feature-rich program of its kind (Hint: press <kbd>CBM+H</kbd> when you get lost) and supports communication at 19200 bps (Take that, C64!).
 
