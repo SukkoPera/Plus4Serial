@@ -1,15 +1,17 @@
 # Plus4Serial
-Plus4Serial is an Open Hardware Serial Port Adapter that plugs into the Commodore Plus/4 User Port, turning it into a fully-functional RS-232 interface.
+Plus4Serial is an Open Hardware Serial Port Adapter that plugs into the Commodore Plus/4 User Port, turning it into a fully-functional [RS-232 interface](https://en.wikipedia.org/wiki/RS-232).
 
 ![Board](https://raw.githubusercontent.com/SukkoPera/Plus4Serial/master/img/render-top.png)
 
 ## Summary
-The +4 User Port has all the signals required by an RS-232 interface, but they are at TTL voltage levels (i.e.: 0/+5V). In order to turn them into a real RS-232 port, they need to be shifted to higher voltages, which is the purpose of this board.
+The Plus/4 User Port has all the signals required by an RS-232 interface, but they are at TTL voltage levels (i.e.: 0/+5V). In order to turn them into a real RS-232 port, they need to be shifted to higher voltages, which is the purpose of this board.
 
 All the signals available on the DE-9 port are translated and usable: RXD, TXD, RTS, CTS, DTR, DSR and DCD. The only exception is RI (Ring Indicator), which is left unconnected.
 
 ## Notes
 This board uses a MAX238 chip for the level shifting, which is nice because it only needs a +5VDC voltage supply. The 9VAC supply available on the User Port is therefore not used. You can find used ones from China easily and cheaply.
+
+If you have an older version of the board with a CTS/_CTS jumper, place it in the _CTS position, as it's the only correct one.
 
 If you are looking for a terminal emulator, I recommend [Term-80](https://plus4world.powweb.com/software/Term-80_English) as it is hands down the most feature-rich program of its kind (Hint: press <kbd>CBM+H</kbd> when you get lost) and supports communication at 19200 bps (Take that, C64!).
 
