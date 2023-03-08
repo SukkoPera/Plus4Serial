@@ -6,7 +6,7 @@ Plus4Serial is an Open Hardware Serial Port Adapter that plugs into the Commodor
 ## Summary
 The +4 User Port has all the signals required by an RS-232 interface, but they are at TTL voltage levels (i.e.: 0/+5V). In order to turn them into a real RS-232 port, they need to be shifted to higher voltages, which is the purpose of this board.
 
-All the signals available on the DB-9 port are translated and usable: RXD, TXD, RTS, CTS, DTR, DSR and DCD. The only exception is RI (Ring Indicator), which is left unconnected.
+All the signals available on the DE-9 port are translated and usable: RXD, TXD, RTS, CTS, DTR, DSR and DCD. The only exception is RI (Ring Indicator), which is left unconnected.
 
 ## Notes
 This board uses a MAX238 chip for the level shifting, which is nice because it only needs a +5VDC voltage supply. The 9VAC supply available on the User Port is therefore not used. You can find used ones from China easily and cheaply.
